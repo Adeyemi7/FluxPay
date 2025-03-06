@@ -6,7 +6,7 @@ import Button from "../../Components/UI/Button"
 const LastOnboardingPage = () => {
   return (
     <div className="bg-[#F5F5F5] py-14 w-full max-w-[768px]">
-        <div className="grid place-items-center ">
+        <div className="grid place-items-center overflow-x-hidden ">
             <LastOnboardingIcon />
         </div>
 
