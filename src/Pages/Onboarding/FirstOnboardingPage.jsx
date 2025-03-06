@@ -23,11 +23,11 @@ const FirstOnboardingPage = () => {
 
         <div className="w-[90%] mx-auto mt-16">
             <p className=" text-[#8B5E3C] font-bold text-[26px] text-center">
-            Experience seamless financial Payment
+            Bye-Bye Cash, Hello Seamless Payments
             </p>
 
             <p className=" text-[#8B5E3C] font-normal text-[12px] text-center mt-4">
-            QR cod payment method in one secure platform.
+            No more scrambling for change, with flux, just scan a QR code or enter a username-done in seconds.
             </p>
         </div>
 

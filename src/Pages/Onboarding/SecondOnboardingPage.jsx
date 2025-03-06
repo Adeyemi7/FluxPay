@@ -23,11 +23,11 @@ const SecondOnboardingPage = () => {
 
         <div className="w-[90%] mx-auto mt-16">
             <p className=" text-[#8B5E3C] font-bold text-[26px] text-center">
-            Instant payments made easily and securely
+            Social Finance, Redefined
             </p>
 
             <p className=" text-[#8B5E3C] font-normal text-[12px] text-center mt-4">
-            Quick, card-free, secure and efficient transactions
+            Money moves better with friends. Split bills, track soending, and even request a friend's help when you're short,because finances should be as connected as your life.
             </p>
         </div>
 
