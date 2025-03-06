@@ -22,8 +22,8 @@ const LastOnboardingPage = () => {
 
         <div className="grid grid-cols-3 gap-2 mt-10 w-[20%] mx-auto">
             <NotSelectedIcon />
-            <SelectedOnboardingIcon />
             <NotSelectedIcon />
+            <SelectedOnboardingIcon />
         </div>
 
         <div className="mt-6 w-[90%] mx-auto grid grid-cols-1 gap-4 mb-6">
