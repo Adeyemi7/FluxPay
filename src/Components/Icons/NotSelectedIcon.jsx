@@ -1,5 +1,5 @@
 
-const NotSelectedIcon = (props) => {
+const NotSelectedIcon = ({onClick, props}) => {
   return (
     <div>
        
@@ -10,6 +10,7 @@ const NotSelectedIcon = (props) => {
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
+    onClick={onClick}
   >
     <rect width={8} height={8} rx={4} fill="#F4EDDE" />
   </svg>

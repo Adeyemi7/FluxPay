@@ -1,5 +1,5 @@
 
-const SelectedOnboardingIcon = (props) => {
+const SelectedOnboardingIcon = ({onClick, props}) => {
   return (
   <svg
     width={8}
@@ -8,6 +8,7 @@ const SelectedOnboardingIcon = (props) => {
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
+    onClick={onClick}
   >
     <rect width={8} height={8} rx={4} fill="#593704" />
   </svg>

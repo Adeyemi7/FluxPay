@@ -15,8 +15,22 @@ const SecondOnboardingPage = () => {
     const handleSkip = () => {
         navigate('/third')
     }
+
+
+    const handleback = () => {
+        navigate('/first')
+    }
+
+    const handleSkipOne = () => {
+        navigate ('/second')
+    }
+
+    const handleSkipMore = () => {
+        navigate ('/third')
+    }
+
   return (
-    <div className="bg-[#F5F5F5] py-14 w-full max-w-[768px]">
+    <div className="bg-[#F5F5F5] py-14 w-full max-w-[768px] min-h-screen">
         <div className=" grid place-content-center">
             <SecondOnboardingIcon />
         </div>
@@ -32,9 +46,9 @@ const SecondOnboardingPage = () => {
         </div>
 
         <div className="grid grid-cols-3 gap-2 mt-10 w-[20%] mx-auto">
-            <NotSelectedIcon />
-            <SelectedOnboardingIcon />
-            <NotSelectedIcon />
+            <NotSelectedIcon onClick={handleback} />
+            <SelectedOnboardingIcon onClick={handleSkipOne} />
+            <NotSelectedIcon onClick={handleSkipMore} />
         </div>
 
         <div className="mt-6 w-[90%] mx-auto grid grid-cols-2 gap-4 mb-6">

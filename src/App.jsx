@@ -5,6 +5,7 @@ import FirstOnboardingPage from './Pages/Onboarding/FirstOnboardingPage';
 import SecondOnboardingPage from './Pages/Onboarding/SecondOnboardingPage';
 import DefaultStarterPage from './Pages/Onboarding/DefaultStarterPage';
 import LastOnboardingPage from './Pages/Onboarding/LastOnboardingPage'; 
+import LoginPage from './Pages/Auth/LoginPage';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/first" element={<FirstOnboardingPage />} />
                 <Route path="/second" element={<SecondOnboardingPage />} />
                 <Route path='/third' element={<LastOnboardingPage />} />
+                <Route path='/LogIn' element={<LoginPage />} />
                 </Routes>
             </Router>
         </>
