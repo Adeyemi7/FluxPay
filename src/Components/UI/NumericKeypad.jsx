@@ -5,7 +5,7 @@ const NumericKeypad = ({ handleNumberClick, handleDelete, handleClear }) => {
   const keys = [1, 2, 3, 4, 5, 6, 7, 8, 9, "clear", 0, "delete"];
 
   return (
-    <div className="grid grid-cols-3 gap-3 mb-6 w-full max-w-sm">
+    <div className="grid place-content-center mx-auto grid-cols-3 gap-3 mb-6 w-full max-w-sm">
       {keys.map((num, index) => (
         <Button
           key={index}

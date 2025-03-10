@@ -6,7 +6,7 @@ import { LiaUserSolid } from "react-icons/lia";
 import { useNavigate } from "react-router-dom";
 import PageLoader from "../../Components/UI/PageLoader";
 
-const PasswordSignUp = () => {
+const ConfirmationSignUp = () => {
 
     const navigate = useNavigate();
 
@@ -38,7 +38,7 @@ const PasswordSignUp = () => {
         }
         setIsLoading(true);
         setTimeout(() => {
-            navigate('/confirmPassword');
+            navigate('/home');
         }
         , 2000);
       };
@@ -58,7 +58,7 @@ const PasswordSignUp = () => {
           <div className=" bg-[#F5F5F5] py-6 w-full max-w-[768px] min-h-screen">
             <div className=" w-[90%] mx-auto overflow-x-hidden ">
             <LiaUserSolid  size={60} className=" grid place-self-center mb-10 border-[#8B5E3C] border-[1px] rounded-full p-3 "/>
-            <h1 className="text-2xl font-semibold mb-4 text-center text-[#8B5E3C]">Enter Password</h1>
+            <h1 className="text-2xl font-semibold mb-4 text-center text-[#8B5E3C]"> Confirm Password</h1>
             <PinDots pinLength={pin.length} maxLength={maxLength} />
             <NumericKeypad handleNumberClick={handleNumberClick} handleDelete={handleDelete} handleClear={handleClear}  />
             <Button
@@ -75,4 +75,4 @@ const PasswordSignUp = () => {
   )
 }
 
-export default PasswordSignUp
+export default ConfirmationSignUp

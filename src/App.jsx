@@ -10,6 +10,7 @@ import PasswordAuthPage from './Pages/Auth/PasswordAuthPage';
 import HomePage from './Pages/Dashboard/HomePage';
 import SignUp from './Pages/SignUp/SignUp';
 import PasswordSignUp from './Pages/SignUp/PasswordSignUp';
+import ConfirmationSignUp from './Pages/SignUp/ConfirmationSignUp';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                 <Route path='/third' element={<LastOnboardingPage />} />
                 <Route path='/SignUp' element={<SignUp />} />
                 <Route path='/passwordCreate' element={<PasswordSignUp />} />
+                <Route path='/confirmPassword' element={<ConfirmationSignUp /> } />
                 <Route path='/LogIn' element={<LoginPage />} />
                 <Route path='/Password' element={<PasswordAuthPage />} />
                 <Route path='/home' element={ <HomePage />} />
