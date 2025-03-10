@@ -63,7 +63,7 @@ const ConfirmationSignUp = () => {
             <NumericKeypad handleNumberClick={handleNumberClick} handleDelete={handleDelete} handleClear={handleClear}  />
             <Button
               name= { isLoading ? <PageLoader /> : "Submit"}
-              buttonClassName={`w-full py-3 rounded-full mx-auto  font-medium transition-all mt-14 ${
+              buttonClassName={`w-full py-3 rounded-full mx-auto  font-medium transition-all mt-4 ${
                 pin.length === maxLength ? "bg-[#8B5E3C] hover:bg-[#7B4E2C] active:bg-[#6B3E1C] text-white" : "bg-[#D0B8A8] opacity-50 cursor-not-allowed text-[#3A2E27]"
               }`}
               buttonOnClick={handleSubmit}
