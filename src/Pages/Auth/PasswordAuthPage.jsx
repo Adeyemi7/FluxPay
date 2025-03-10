@@ -1,17 +1,17 @@
 import BackwardArrowIcon from "../../Components/Icons/BackwardArrowIcon"
-import InputField from "../../Components/UI/InputField"
 import { useNavigate } from "react-router-dom"
 import { useForm, Controller } from 'react-hook-form';
+import PasswordInputField from "../../Components/UI/PasswordInputField";
 import Button from '../../Components/UI/Button'
 import PageLoader from "../../Components/UI/PageLoader";
 import { useState } from 'react';
 
-const LoginPage = () => {
+const PasswordAuthPage = () => {
 
     const navigate = useNavigate();
 
     const handlePreviousPage = () => {
-        navigate('/third')
+        navigate('/Login')
     }
 
     const {
@@ -24,15 +24,15 @@ const LoginPage = () => {
     } = useForm({
         mode: 'onChange',
         defaultValues: {
-            email: '',
+            password: '',
         },
     });
 
     const [isLoading, setIsLoading] = useState(false);
 
-    const watchEmail = watch('email');
+    const watchPassword = watch ('password')
 
-    const isFormComplete = watchEmail;
+    const isFormComplete = watchPassword;
 
     const onSubmit = async (data) => {
         await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -45,7 +45,7 @@ const LoginPage = () => {
         if (isFormComplete) setIsLoading(true);
         setTimeout(() => {
             setIsLoading(false);
-            navigate('/Password');
+            navigate('/home');
         }, 2000);
     };
   return (
@@ -64,33 +64,38 @@ const LoginPage = () => {
                     className=" w-[90%] mx-auto mt-16 "
                     onSubmit={handleSubmit(onSubmit, handleNavigationDashboard)}
                 >
-                    <Controller
-                        name="email"
+
+<Controller
+                        name="password"
                         control={control}
                         rules={{
-                            required: 'Users email is required',
+                            required: 'Password is required',
+                            minLength: {
+                                value: 8,
+                                message: ' Create a secured Password, Minimum 8 characters',
+                            },
                             pattern: {
-                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                message: 'Invalid email address. Please try again!',
+                                value: /^(?=.*[!@#$%^&*])/,
+                                message: 'Password must contain at least one special character',
                             },
                         }}
                         render={({ field }) => (
-                            <InputField
-                                label={'Email Address'}
-                                type="text"
-                                placeholder=" vic_ayo-fluxpay@gmail.com"
-                                className={`block outline-none mt-2 bg-[#ffff] text-[#6F6F6F]  box-border  w-full p-2 border-b-2   ${
-                                    watchEmail
-                                        ? 'border-b-2 border-[#8B5E3C]'
-                                        : 'border-red-500'
+                            <PasswordInputField
+                                label={'Password'}
+                                type="password"
+                                placeholder="Enter your password"
+                                className={`block outline-none mt-2 bg-[#ffff] text-[#6F6F6F]   box-border  w-full p-2 border-b-2 ${
+                                    watchPassword ? 'border-b-2 border-[#8B5E3C]' : 'border-red-500'
                                 }`}
-                                error={
-                                    errors.email ? errors.email.message : null
-                                }
+                                error={errors.password?.message}
                                 {...field}
                             />
                         )}
                     />
+
+                    <p className="font-bold text-[#8B5E3C] text-right  text-base block mb-2 ">
+                        Forget Password
+                    </p>
 
 <Button
                         type="submit"
@@ -117,4 +122,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage
+export default PasswordAuthPage

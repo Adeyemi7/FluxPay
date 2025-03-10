@@ -3,7 +3,7 @@ import NotSelectedIcon from "../../Components/Icons/NotSelectedIcon"
 import SelectedOnboardingIcon from "../../Components/Icons/SelectedOnboardingIcon"
 import Button from "../../Components/UI/Button"
 import GoogleIcons from "../../Components/Icons/GoogleIcons"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const LastOnboardingPage = () => {
 
@@ -69,9 +69,11 @@ const LastOnboardingPage = () => {
         </div>
 
         <div className="w-[90%] mx-auto mt-6 text-[#8B5E3C] font-normal text-[12px] text-center">
-            <p>
+            <p className=" hover:underline">
+                <Link to="/SignUp" >
                 <span> Don’t have an account? </span>
                 <span> {''} Sign up </span>
+            </Link>
             </p>
         </div>
 

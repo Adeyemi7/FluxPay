@@ -18,7 +18,7 @@ const PasswordInputField = ({
 
     return (
         <div className="mb-6 relative">
-            <label className="font-bold text-[#261000] text-sm block mb-2 sm:text-base">
+            <label className=" font-bold text-[#8B5E3C]  text-base block mb-2 ">
                 {label}
             </label>
             <input
