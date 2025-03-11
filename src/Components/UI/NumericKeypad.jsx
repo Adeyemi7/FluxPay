@@ -11,7 +11,7 @@ const NumericKeypad = ({ handleNumberClick, handleDelete, handleClear }) => {
   ];
 
   return (
-    <div className="grid place-content-center mx-auto grid-cols-3 gap-3 mb-6 w-[80%] max-w-sm">
+    <div className="grid place-content-center mx-auto grid-cols-3 gap-3 mb-6 w-[90%] max-w-sm">
       {keys.map((key, index) => (
         <Button
           key={index}
